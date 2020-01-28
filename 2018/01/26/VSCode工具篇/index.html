@@ -63,7 +63,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">230字</span>
+            <span class="post-count">1k字</span>
         </span>
     </span>
 
@@ -72,7 +72,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">3分钟</span>
         </span>
     </span>
 </div>
@@ -98,7 +98,7 @@
       
 
       
-      <p>工欲善其事，必先利其器！这里将会详细介绍常用的开发工具VSCode<a id="more"></a></p>
+      <p>工欲善其事，必先利其器！这里将会详细介绍开发工具VSCode的常用设置和插件，帮助读者今后更加高效的进行开发<a id="more"></a></p>
 <h3 id="一、设置VSCode中文显示"><a href="#一、设置VSCode中文显示" class="headerlink" title="一、设置VSCode中文显示"></a>一、设置VSCode中文显示</h3><p>进入VSCode首页，同时按Ctrl+Shift+P，出现如下输入框，输入：configure language</p>
 <p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C1.PNG" alt></p>
 <p>然后按回车键，列表下将会显示目前支持的语言类型，点击选中需要的语言即可，如果没有需要的语言，则点击“Install additional languages…”</p>
@@ -109,7 +109,84 @@
 <p><img src="/.com//VSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C543678.PNG" alt></p>
 <p>重启之后，可以发现VSCode的语言已变成中文简体类型，如下图所示</p>
 <p><img src="/.com//VSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C325.PNG" alt></p>
-<h3 id="二、常用快捷键"><a href="#二、常用快捷键" class="headerlink" title="二、常用快捷键"></a>二、常用快捷键</h3><p>磨刀不误砍柴工，熟悉快捷键之后对以后的开发会更加有益，所以下面我将列出一些常用的VSCode快捷键</p>
+<h3 id="二、设置开发模板"><a href="#二、设置开发模板" class="headerlink" title="二、设置开发模板"></a>二、设置开发模板</h3><p>开发时不断创建新的文件是最熟悉的事情了，但是每次新建一个文件，比如HTML文件都是空白的，这就需要开发者重新写一堆基本代码或者复制过来，都是比较麻烦的，其实VSCode支持自定义模板，通过快捷键快速生成模板。打开VSCode，点击左下角设置图标，然后点击用户代码片段，如下图所示</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C2143.PNG" alt></p>
+<p>然后在顶部输入框中输入html，回车确定</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C68756.PNG" alt></p>
+<p>在打开的html.json文件中参照如下代码设置自己的模板</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C89076.PNG" alt></p>
+<p>【html.json】</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="comment">// html5模板</span></span><br><span class="line">	<span class="attr">"html5 demo"</span>: &#123;</span><br><span class="line">		<span class="attr">"prefix"</span>: <span class="string">"!h5"</span>,   <span class="comment">// 这里设置快捷键</span></span><br><span class="line">		<span class="attr">"body"</span>: [</span><br><span class="line">			<span class="string">"&lt;!DOCTYPE html&gt;"</span>,</span><br><span class="line">			<span class="string">"&lt;html&gt;"</span>,</span><br><span class="line">			<span class="string">"&lt;head&gt;"</span>,</span><br><span class="line">				<span class="string">"\t&lt;title&gt;$1&lt;/title&gt;"</span>,  <span class="comment">// 光标会自动聚焦到$1的位置，按tab 会跳转到$2的位置</span></span><br><span class="line">				<span class="string">"\t&lt;meta charset='utf-8' /&gt;"</span>,</span><br><span class="line">			<span class="string">"&lt;/head&gt;"</span>,</span><br><span class="line">			<span class="string">"&lt;body&gt;"</span>,</span><br><span class="line">			    <span class="string">"\t$2"</span>,</span><br><span class="line">			<span class="string">"&lt;/body&gt;"</span>,</span><br><span class="line">			<span class="string">"&lt;/html&gt;"</span></span><br><span class="line">		],</span><br><span class="line">		<span class="attr">"description"</span>: <span class="string">"html5基本结构模板"</span>  <span class="comment">// 这里是快捷键输入时，VS code的提示文字</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>【测试模板】新建html文件，输入  !h5 ，然后回车，如下图</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C79068.PNG" alt></p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C903283948.PNG" alt></p>
+<h3 id="三、效果预览插件"><a href="#三、效果预览插件" class="headerlink" title="三、效果预览插件"></a>三、效果预览插件</h3><p>打开VSCode，在插件商店输入Preview on Web Server搜索如下，点击“Install”进行安装，安装完成重启VSCode</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C43656.PNG" alt></p>
+<p>重启完成，写个demo如下测试效果，在代码区域点击鼠标右键，选择在侧边展示实时效果（或者使用快捷键Ctrl+Shift+V快速打开）</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C2345.PNG" alt></p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C4372854.PNG" alt></p>
+<h3 id="四、设置代码定时保存"><a href="#四、设置代码定时保存" class="headerlink" title="四、设置代码定时保存"></a>四、设置代码定时保存</h3><p>安装上面预览插件之后，可能读者会发现代码写完之后，页面效果并不会马上刷新，需要手动保存代码页面才会更新，这样一来感觉也有点不方便，没有发挥插件实时预览的效果。所以，我们很自然会想到，如果代码可以自动保存，是不是就可以做到真正的实时预览了呢？是的，VSCode对这个做了非常好的支持，我们可以设置多种自动保存模式，其中与我们的需求相匹配的就是-定时保存，参照下图所示，即可完成定时保存代码的设置，快去体验一把吧，是不是有一种飞一般的感觉？</p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C23652.PNG" alt></p>
+<p><img src="/.com//%5CVSCode%E5%B7%A5%E5%85%B7%E7%AF%87%5C325408.PNG" alt></p>
+<h3 id="五、常用快捷键"><a href="#五、常用快捷键" class="headerlink" title="五、常用快捷键"></a>五、常用快捷键</h3><p>磨刀不误砍柴工，熟悉快捷键之后对以后的开发会更加有益，所以下面我将列出一些常用的VSCode快捷键</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>描述说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ctrl+w</td>
+<td>关闭当前窗口</td>
+</tr>
+<tr>
+<td>ctrl+b</td>
+<td>显示/隐藏左侧边栏</td>
+</tr>
+<tr>
+<td>ctrl+~</td>
+<td>显示/隐藏控制台</td>
+</tr>
+<tr>
+<td>ctrl+home/end</td>
+<td>快速回到顶部/底部</td>
+</tr>
+<tr>
+<td>shift+home/end</td>
+<td>选中当前位置到行首/尾所有内容</td>
+</tr>
+<tr>
+<td>ctrl+shift+k</td>
+<td>删除当前行</td>
+</tr>
+<tr>
+<td>ctrl+shift+回车键</td>
+<td>在当前位置上面新增一行空白行</td>
+</tr>
+<tr>
+<td>ctrl+k,ctrl+c</td>
+<td>单行注释</td>
+</tr>
+<tr>
+<td>alt+sift+a</td>
+<td>多行注释</td>
+</tr>
+<tr>
+<td>alt+上下方向键</td>
+<td>代码向上/下移动一行</td>
+</tr>
+<tr>
+<td>alt+数字</td>
+<td>切换文件，例如alt+1，表示切换到第1个文件</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>文件重命名</td>
+</tr>
+</tbody></table>
+<p>至此，VS Code开发工具的常用设置就完成啦！接下来就是属于你的Coding时刻！</p>
 
       
       <!-- 打赏 -->
